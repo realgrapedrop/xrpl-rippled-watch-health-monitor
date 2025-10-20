@@ -16,18 +16,18 @@ A lightweight, real-time monitoring tool for XRPL (XRP Ledger) validator nodes. 
 
 ## 📋 Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Metrics Explained](#metrics-explained)
-- [Health Status](#health-status)
-- [How It Works](#how-it-works)
-- [Troubleshooting](#troubleshooting)
-- [Uninstallation](#uninstallation)
-- [Contributing](#contributing)
-- [License](#license)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Metrics Explained](#-metrics-explained)
+- [Health Status](#-health-status)
+- [How It Works](#-how-it-works)
+- [Troubleshooting](#-troubleshooting)
+- [Uninstallation](#-uninstallation)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ## 🔧 Prerequisites
 
