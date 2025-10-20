@@ -51,7 +51,7 @@ sudo apt-get install -y docker.io
 
 ## 📥 Installation
 
-### Method 1: Quick Install
+### Method 1: Quick Install (Recommended)
 
 ```bash
 # Download the script
@@ -62,6 +62,20 @@ chmod +x rippled-watch.sh
 
 # Run it (will prompt for configuration on first run)
 ./rippled-watch.sh
+```
+### Optional: System-wide Installation
+For permanent deployment or running as a command from anywhere:
+
+```bash
+# Download the installer
+curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch-health-monitor/main/install.sh
+
+# Install for system wide installation
+chmod +x install.sh
+sudo ./install.sh
+
+# Now available from any directory
+rippled-watch
 ```
 
 ### Method 2: Clone Repository
