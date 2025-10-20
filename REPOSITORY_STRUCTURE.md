@@ -3,7 +3,7 @@
 ## Recommended Directory Layout
 
 ```
-rippled-watch/
+xrpl-rippled-watch-health-monitor/
 ├── README.md                   # Main documentation
 ├── LICENSE                     # MIT License
 ├── CHANGELOG.md               # Version history
