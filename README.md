@@ -55,7 +55,7 @@ sudo apt-get install -y docker.io
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/rippled-watch/main/rippled-watch.sh
+curl -O https://raw.githubusercontent.com/YOUR_USERNAME/xrpl-rippled-watch-health-monitor/main/rippled-watch.sh
 
 # Make it executable
 chmod +x rippled-watch.sh
