@@ -1,0 +1,39 @@
+# Config files (user-specific)
+*.conf
+rippled-watch.conf
+
+# Backup files
+*.bak
+*~
+*.swp
+*.swo
+
+# Log files
+*.log
+debug.log
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Test outputs
+test-output/
+test-results/
