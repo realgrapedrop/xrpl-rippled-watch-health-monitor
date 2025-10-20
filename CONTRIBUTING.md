@@ -112,11 +112,11 @@ process() {
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/rippled-watch.git
-cd rippled-watch
+git clone https://github.com/YOUR_USERNAME/xrpl-rippled-watch-health-monitor.git
+cd xrpl-rippled-watch-health-monitor
 
 # Add upstream remote
-git remote add upstream https://github.com/ORIGINAL_OWNER/rippled-watch.git
+git remote add upstream https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
 
 # Create a feature branch
 git checkout -b feature/my-feature
