@@ -55,7 +55,7 @@ sudo apt-get install -y docker.io
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/xrpl-rippled-watch-health-monitor/main/rippled-watch.sh
+curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch-health-monitor/main/rippled-watch.sh
 
 # Make it executable
 chmod +x rippled-watch.sh
@@ -68,10 +68,10 @@ chmod +x rippled-watch.sh
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/rippled-watch.git
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
 
 # Navigate to directory
-cd rippled-watch
+cd xrpl-rippled-watch-health-monitor
 
 # Make script executable
 chmod +x rippled-watch.sh
@@ -83,11 +83,10 @@ chmod +x rippled-watch.sh
 ### Method 3: System-wide Installation
 
 ```bash
-# Copy to a directory in your PATH
-sudo cp rippled-watch.sh /usr/local/bin/rippled-watch
-
-# Make it executable
-sudo chmod +x /usr/local/bin/rippled-watch
+# Clone and run installer
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
+cd xrpl-rippled-watch-health-monitor
+sudo ./install.sh
 
 # Run from anywhere
 rippled-watch
@@ -570,25 +569,25 @@ sudo usermod -aG docker $USER
 
 ```bash
 # Navigate to script directory
-cd /path/to/rippled-watch
+cd /path/to/xrpl-rippled-watch-health-monitor
 
 # Remove script and config
 rm rippled-watch.sh rippled-watch.conf
 
 # If installed system-wide
-sudo rm /usr/local/bin/rippled-watch
+sudo rippled-watch-uninstall
 ```
 
 ### Clean Uninstall Script
 
-For your convenience, here's a one-liner to remove everything:
+For your convenience, use the included uninstaller:
 
 ```bash
-# From script directory
-rm -f rippled-watch.sh rippled-watch.conf
+# From repository directory
+sudo ./uninstall.sh
 
-# If you also want to remove system-wide install
-sudo rm -f /usr/local/bin/rippled-watch
+# Or if installed system-wide
+sudo rippled-watch-uninstall
 ```
 
 ## 🤝 Contributing
@@ -599,8 +598,8 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/rippled-watch.git
-cd rippled-watch
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
+cd xrpl-rippled-watch-health-monitor
 
 # Make changes to rippled-watch.sh
 
@@ -619,6 +618,8 @@ When reporting issues, please include:
 5. **Error messages** - Full error output
 6. **Steps to reproduce**
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -631,7 +632,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/YOUR_USERNAME/rippled-watch/issues)
+- **Issues:** [GitHub Issues](https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor/discussions)
 - **XRPL Documentation:** [xrpl.org](https://xrpl.org/)
 - **XRPL Discord:** [XRPL Validators](https://discord.gg/xrpl)
 
