@@ -87,10 +87,7 @@ git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
 # Navigate to directory
 cd xrpl-rippled-watch
 
-# Make script executable
-chmod +x rippled-watch.sh
-
-# Run the monitor
+# Run the monitor (already executable)
 ./rippled-watch.sh
 ```
 
