@@ -469,7 +469,9 @@ banner() {
 pretty_line() {
     [ "$JSONMODE" -eq 1 ] && return
     local lbl="$1" val="$2" color="${3:-$RS}"
-    printf "  %-20s %s%s%s\n" "$lbl:" "$color" "$val" "$RS"
+    printf "  %-20s %s%s%s" "$lbl:" "$color" "$val" "$RS"
+    tput el 2>/dev/null || true  # Clear to end of line to remove old content
+    printf "\n"
 }
 
 clear_to_end() {
@@ -679,65 +681,65 @@ while true; do
             }'
     else
         # TUI output mode
-        echo "─────────────────────────── ${BOLD}Container Info${RS} ───────────────────────────"
+        printf "─────────────────────────── ${BOLD}Container Info${RS} ───────────────────────────"; tput el 2>/dev/null || true; printf "\n"
         pretty_line "Image" "$img"
         pretty_line "Status" "$status_line"
         pretty_line "Restarts" "$restarts"
-        echo
-        
-        echo "──────────────────────────── ${BOLD}Ledger Info${RS} ────────────────────────────"
+        tput el 2>/dev/null || true; printf "\n"
+
+        printf "──────────────────────────── ${BOLD}Ledger Info${RS} ────────────────────────────"; tput el 2>/dev/null || true; printf "\n"
         pretty_line "Sequence" "$seq"
         pretty_line "Age" "${age}s"
         pretty_line "Ledgers/min" "$lpm"
         pretty_line "Complete Ledgers" "$comp"
-        echo
-        
-        echo "─────────────────────────── ${BOLD}Network Info${RS} ───────────────────────────"
+        tput el 2>/dev/null || true; printf "\n"
+
+        printf "─────────────────────────── ${BOLD}Network Info${RS} ───────────────────────────"; tput el 2>/dev/null || true; printf "\n"
         pretty_line "Server State" "$state"
         pretty_line "Peers" "$total_peers (in:$inbound_peers / out:$outbound_peers)"
         pretty_line "P90 RTT" "${p90_rtt:--} ms"
-        echo
-        
-        echo "──────────────────────────── ${BOLD}Consensus${RS} ─────────────────────────────"
+        tput el 2>/dev/null || true; printf "\n"
+
+        printf "──────────────────────────── ${BOLD}Consensus${RS} ─────────────────────────────"; tput el 2>/dev/null || true; printf "\n"
         pretty_line "Proposing" "$proposing"
         pretty_line "Validating" "$validating"
         pretty_line "Synced" "$synched"
         pretty_line "Proposers" "$proposers"
         pretty_line "Previous Proposers" "$previous_proposers"
         pretty_line "Converge Time" "${converge_time}s"
-        echo
-        
-        echo "────────────────────────── ${BOLD}Performance${RS} ────────────────────────────"
+        tput el 2>/dev/null || true; printf "\n"
+
+        printf "────────────────────────── ${BOLD}Performance${RS} ────────────────────────────"; tput el 2>/dev/null || true; printf "\n"
         pretty_line "Load Factor" "$load"
         pretty_line "Inflight Ledgers" "$inflight"
         pretty_line "Recent Timeouts" "$tosum"
-        echo
-        
-        echo "──────────────────────────── ${BOLD}Resources${RS} ─────────────────────────────"
+        tput el 2>/dev/null || true; printf "\n"
+
+        printf "──────────────────────────── ${BOLD}Resources${RS} ─────────────────────────────"; tput el 2>/dev/null || true; printf "\n"
         [ -n "$ds_cpu" ] && pretty_line "CPU Usage" "$ds_cpu"
         [ -n "$ds_mem" ] && pretty_line "Memory" "$ds_mem"
         [ -n "$ds_memperc" ] && pretty_line "Memory %" "$ds_memperc"
         [ -n "$ds_pids" ] && pretty_line "PIDs" "$ds_pids"
-        echo
-        
-        echo "────────────────────────────── ${BOLD}Health${RS} ──────────────────────────────"
+        tput el 2>/dev/null || true; printf "\n"
+
+        printf "────────────────────────────── ${BOLD}Health${RS} ──────────────────────────────"; tput el 2>/dev/null || true; printf "\n"
         case "$health" in
             stable)
-                printf "  %s✅ STABLE%s - %s\n" "$G" "$RS" "$reason"
+                printf "  %s✅ STABLE%s - %s" "$G" "$RS" "$reason"; tput el 2>/dev/null || true; printf "\n"
                 ;;
             watch)
-                printf "  %s⚠️  WATCH%s - %s\n" "$Y" "$RS" "$reason"
+                printf "  %s⚠️  WATCH%s - %s" "$Y" "$RS" "$reason"; tput el 2>/dev/null || true; printf "\n"
                 ;;
             trouble)
-                printf "  %s❌ TROUBLE%s - %s\n" "$R" "$RS" "$reason"
+                printf "  %s❌ TROUBLE%s - %s" "$R" "$RS" "$reason"; tput el 2>/dev/null || true; printf "\n"
                 ;;
         esac
-        echo
-        
-        [ -n "$pub" ] && [ "$pub" != "null" ] && printf "${DIM}Validator: %s${RS}\n" "$pub"
-        echo
-        printf "${DIM}Auto-refresh every %ss • Ctrl+C to exit • --help for options${RS}\n" "$INTERVAL"
-        
+        tput el 2>/dev/null || true; printf "\n"
+
+        [ -n "$pub" ] && [ "$pub" != "null" ] && { printf "${DIM}Validator: %s${RS}" "$pub"; tput el 2>/dev/null || true; printf "\n"; }
+        tput el 2>/dev/null || true; printf "\n"
+        printf "${DIM}Auto-refresh every %ss • Ctrl+C to exit • --help for options${RS}" "$INTERVAL"; tput el 2>/dev/null || true; printf "\n"
+
         # Clear any remaining content from previous renders
         clear_to_end
     fi
