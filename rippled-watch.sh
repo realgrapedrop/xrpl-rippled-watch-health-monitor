@@ -11,7 +11,16 @@ set -uo pipefail
 # Get script directory and name for config file
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}" .sh)"
-CONFIG_FILE="${SCRIPT_DIR}/${SCRIPT_NAME}.conf"
+
+# Use user's home directory for config if installed system-wide
+if [ "$SCRIPT_DIR" = "/usr/local/bin" ] || [ "$SCRIPT_DIR" = "/usr/bin" ]; then
+    CONFIG_FILE="${HOME}/.config/rippled-watch.conf"
+    # Create .config directory if it doesn't exist
+    mkdir -p "${HOME}/.config"
+else
+    # Use script directory if running locally
+    CONFIG_FILE="${SCRIPT_DIR}/${SCRIPT_NAME}.conf"
+fi
 
 # Default values
 DEFAULT_INTERVAL=5
