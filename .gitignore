@@ -43,3 +43,4 @@ test-results/
 
 # Git temporary files
 *.orig
+*.rej
