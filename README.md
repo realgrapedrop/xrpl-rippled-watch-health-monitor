@@ -51,7 +51,33 @@ sudo apt-get install -y docker.io
 
 ## 📥 Installation
 
-### Method 1: Quick Install (Recommended)
+### Method 1: Clone Repository (Recommended - No sudo required)
+
+```bash
+# Clone the repository
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
+cd xrpl-rippled-watch
+
+# Add to PATH for easy access from anywhere
+echo 'export PATH="$HOME/monitoring/xrpl-rippled-watch:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+# Run from anywhere (no sudo needed!)
+rippled-watch
+```
+
+### Method 2: Run Locally (No installation)
+
+```bash
+# Clone the repository
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
+cd xrpl-rippled-watch
+
+# Run directly (already executable)
+./rippled-watch.sh
+```
+
+### Method 3: Quick Download
 
 ```bash
 # Download the script
@@ -63,35 +89,10 @@ chmod +x rippled-watch.sh
 # Run it (will prompt for configuration on first run)
 ./rippled-watch.sh
 ```
-### Optional: System-wide Installation
-For permanent deployment or running as a command from anywhere:
 
-```bash
-# Download the installer
-curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch/main/install.sh
+### Optional: System-wide Installation (Requires sudo)
 
-# Install for system wide installation
-chmod +x install.sh
-sudo ./install.sh
-
-# Now available from any directory
-rippled-watch
-```
-
-### Method 2: Clone Repository
-
-```bash
-# Clone the repository
-git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
-
-# Navigate to directory
-cd xrpl-rippled-watch
-
-# Run the monitor (already executable)
-./rippled-watch.sh
-```
-
-### Method 3: System-wide Installation
+**Note:** This requires sudo permissions. We recommend Method 1 instead.
 
 ```bash
 # Clone and run installer
