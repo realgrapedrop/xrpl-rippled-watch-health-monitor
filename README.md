@@ -55,7 +55,7 @@ sudo apt-get install -y docker.io
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch-health-monitor/main/rippled-watch.sh
+curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch/main/rippled-watch.sh
 
 # Make it executable
 chmod +x rippled-watch.sh
@@ -68,7 +68,7 @@ For permanent deployment or running as a command from anywhere:
 
 ```bash
 # Download the installer
-curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch-health-monitor/main/install.sh
+curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch/main/install.sh
 
 # Install for system wide installation
 chmod +x install.sh
@@ -82,10 +82,10 @@ rippled-watch
 
 ```bash
 # Clone the repository
-git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
 
 # Navigate to directory
-cd xrpl-rippled-watch-health-monitor
+cd xrpl-rippled-watch
 
 # Make script executable
 chmod +x rippled-watch.sh
@@ -98,8 +98,8 @@ chmod +x rippled-watch.sh
 
 ```bash
 # Clone and run installer
-git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
-cd xrpl-rippled-watch-health-monitor
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
+cd xrpl-rippled-watch
 sudo ./install.sh
 
 # Run from anywhere
@@ -583,7 +583,7 @@ sudo usermod -aG docker $USER
 
 ```bash
 # Navigate to script directory
-cd /path/to/xrpl-rippled-watch-health-monitor
+cd /path/to/xrpl-rippled-watch
 
 # Remove script and config
 rm rippled-watch.sh rippled-watch.conf
@@ -612,8 +612,8 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ```bash
 # Clone the repository
-git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
-cd xrpl-rippled-watch-health-monitor
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
+cd xrpl-rippled-watch
 
 # Make changes to rippled-watch.sh
 
@@ -646,8 +646,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor/discussions)
+- **Issues:** [GitHub Issues](https://github.com/realgrapedrop/xrpl-rippled-watch/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/realgrapedrop/xrpl-rippled-watch/discussions)
 - **XRPL Documentation:** [xrpl.org](https://xrpl.org/)
 - **XRPL Discord:** [XRPL Validators](https://discord.gg/xrpl)
 

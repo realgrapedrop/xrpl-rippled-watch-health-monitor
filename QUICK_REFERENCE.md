@@ -4,18 +4,18 @@
 
 ```bash
 # Quick install
-curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch-health-monitor/main/rippled-watch.sh
+curl -O https://raw.githubusercontent.com/realgrapedrop/xrpl-rippled-watch/main/rippled-watch.sh
 chmod +x rippled-watch.sh
 ./rippled-watch.sh
 
 # Clone repository
-git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
-cd xrpl-rippled-watch-health-monitor
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
+cd xrpl-rippled-watch
 ./rippled-watch.sh
 
 # System-wide install
-git clone https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
-cd xrpl-rippled-watch-health-monitor
+git clone https://github.com/realgrapedrop/xrpl-rippled-watch.git
+cd xrpl-rippled-watch
 sudo ./install.sh
 rippled-watch
 ```
@@ -226,19 +226,19 @@ Add to `~/.bashrc` or `~/.zshrc`:
 
 ```bash
 # Quick start
-alias rwm='cd ~/xrpl-rippled-watch-health-monitor && ./rippled-watch.sh'
+alias rwm='cd ~/xrpl-rippled-watch && ./rippled-watch.sh'
 
 # Fast refresh
-alias rwf='cd ~/xrpl-rippled-watch-health-monitor && ./rippled-watch.sh --interval 1'
+alias rwf='cd ~/xrpl-rippled-watch && ./rippled-watch.sh --interval 1'
 
 # JSON output
-alias rwj='cd ~/xrpl-rippled-watch-health-monitor && ./rippled-watch.sh --json'
+alias rwj='cd ~/xrpl-rippled-watch && ./rippled-watch.sh --json'
 ```
 
 ## Getting Help
 
-- **GitHub Issues:** [Report bugs or request features](https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor/issues)
-- **GitHub Discussions:** [Ask questions](https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor/discussions)
+- **GitHub Issues:** [Report bugs or request features](https://github.com/realgrapedrop/xrpl-rippled-watch/issues)
+- **GitHub Discussions:** [Ask questions](https://github.com/realgrapedrop/xrpl-rippled-watch/discussions)
 - **XRPL Docs:** https://xrpl.org/
 - **Script Help:** `./rippled-watch.sh --help`
 

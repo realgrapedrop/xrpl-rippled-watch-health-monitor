@@ -36,7 +36,7 @@ echo -e "${GREEN}✓${NC} Running with appropriate permissions"
 # Check if source script exists
 if [ ! -f "$SOURCE_SCRIPT" ]; then
     echo -e "${RED}✗ Source script not found: $SOURCE_SCRIPT${NC}"
-    echo "  Please run this installer from the rippled-watch directory"
+    echo "  Please run this installer from the xrpl-rippled-watch directory"
     exit 1
 fi
 

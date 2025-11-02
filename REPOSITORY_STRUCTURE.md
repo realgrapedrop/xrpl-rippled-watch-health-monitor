@@ -3,7 +3,7 @@
 ## Recommended Directory Layout
 
 ```
-xrpl-rippled-watch-health-monitor/
+xrpl-rippled-watch/
 ├── README.md                   # Main documentation
 ├── LICENSE                     # MIT License
 ├── CHANGELOG.md               # Version history
@@ -93,8 +93,8 @@ Example configuration files for reference:
 ### Step 1: Initialize Repository
 
 ```bash
-mkdir rippled-watch
-cd rippled-watch
+mkdir xrpl-rippled-watch
+cd xrpl-rippled-watch
 git init
 ```
 
@@ -136,10 +136,10 @@ git commit -m "Initial commit: XRPL Validator Health Monitor v1.0.0"
 ### Step 5: Create GitHub Repository
 
 ```bash
-# On GitHub, create new repository: rippled-watch
+# On GitHub, create new repository: xrpl-rippled-watch
 # Then link and push:
 
-git remote add origin https://github.com/YOUR_USERNAME/rippled-watch.git
+git remote add origin https://github.com/YOUR_USERNAME/xrpl-rippled-watch.git
 git branch -M main
 git push -u origin main
 ```

@@ -112,11 +112,11 @@ process() {
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/xrpl-rippled-watch-health-monitor.git
-cd xrpl-rippled-watch-health-monitor
+git clone https://github.com/YOUR_USERNAME/xrpl-rippled-watch.git
+cd xrpl-rippled-watch
 
 # Add upstream remote
-git remote add upstream https://github.com/realgrapedrop/xrpl-rippled-watch-health-monitor.git
+git remote add upstream https://github.com/realgrapedrop/xrpl-rippled-watch.git
 
 # Create a feature branch
 git checkout -b feature/my-feature
@@ -232,8 +232,8 @@ All submissions require review. We look for:
 
 ## 💬 Getting Help
 
-- **Questions:** Open a [Discussion](https://github.com/YOUR_USERNAME/rippled-watch/discussions)
-- **Issues:** File a [Bug Report](https://github.com/YOUR_USERNAME/rippled-watch/issues)
+- **Questions:** Open a [Discussion](https://github.com/realgrapedrop/xrpl-rippled-watch/discussions)
+- **Issues:** File a [Bug Report](https://github.com/realgrapedrop/xrpl-rippled-watch/issues)
 - **Chat:** Join the XRPL Discord
 
 ## 🏆 Recognition
