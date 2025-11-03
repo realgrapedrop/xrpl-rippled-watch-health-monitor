@@ -94,6 +94,53 @@ JSON mode (`--json`) for integration with:
 - Clear separation of concerns (config, data collection, display, health logic)
 - Both structured (JSON) and human-readable (TUI) outputs
 
+## Git Commit Guidelines
+
+### Attribution Policy
+- **DO NOT** include AI assistant attribution in commit messages
+- **DO NOT** add `Co-Authored-By: Claude` or similar AI attribution
+- **DO NOT** reference AI tools in commit message bodies
+- All commits should be attributed solely to the project owner (realgrapedrop)
+
+### Commit Message Format
+```
+Brief description of changes
+
+- Bullet point details of what changed
+- Technical implementation notes
+- Bug fixes or feature additions
+```
+
+**Good Example:**
+```
+Fix config file location for system-wide installation
+
+- Save config to ~/.config/rippled-watch.conf when installed system-wide
+- Use local directory when running from source
+- Create ~/.config directory if it doesn't exist
+```
+
+**Bad Example (DO NOT DO THIS):**
+```
+Fix config file location
+
+🤖 Generated with Claude Code
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+### Why No AI Attribution?
+- Keeps git history clean and professional
+- Maintains clear project ownership
+- Prevents contributor graph pollution
+- GitHub caches contributor data aggressively (can take days/weeks to clear)
+
+### Working with AI Assistants
+- AI tools (like Claude Code) are helpful development aids
+- Use them freely for coding, debugging, and problem-solving
+- This `.project/PROJECT.md` file helps AI understand project context
+- Just don't add AI attribution to commits pushed to GitHub
+
 ## Dependencies
 
 - `bash` - Shell interpreter
