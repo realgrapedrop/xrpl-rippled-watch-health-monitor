@@ -39,7 +39,7 @@ test-output/
 test-results/
 
 # Project metadata local settings
-.project-meta/settings.local.json
+.project-metadata/settings.local.json
 
 # Git temporary files
 *.orig
